@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+#map-area {
+  height: 425px;
+}
+
+.search-area {
+  width: 100%;
+  background: url("./images/pattern-bg.png");
+  height: 200px;
+}
+
+.search-area .header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  font-size: 25px;
+}
+
+.search-area .search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.search-area .search-bar input,
+button {
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-area .search-bar input {
+  width: 280px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.search-area .search-bar button {
+  width: 35px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: hsl(0, 0%, 17%);
+  color: white;
+  background-image: url("./images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.info-response-area {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  padding: 25px;
+  width: 500px;
+  background: white;
+  z-index: 999;
+  border-radius: 5px;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 6px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 10px 5px -6px rgba(0, 0, 0, 0.75);
+}
+
+.info-response-area div {
+  padding: 20px;
+}
+
+.info-response-area div:not(:last-child) {
+  border-right: 2px solid lightgray;
+}
+
+.info-response-area div span {
+  color: gray;
+  font-weight: bold;
+  font-size: 12px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .info-response-area {
+    display: block;
+    top: 100px;
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .info-response-area div {
+    padding: 6px;
+  }
+
+  .info-response-area div:not(:last-child) {
+    border: none;
+  }
+
+  #map-area {
+    height: 63.2vh;
+  }
+}
